@@ -46,6 +46,6 @@ npm start
 Чтобы создать клон репозитория в командной строке:
 
 ```cmd
-git clone https://github.com/MoisGames/to-do-list-react-ts.git
+git clone https://github.com/MoisGames/todo-list-react-ts.git
 ```
 
