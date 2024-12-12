@@ -1,0 +1,183 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  --pink-color: rgb(234, 219, 218);
+  --light-grey-color: rgb(245,245,245);
+  --text-light-grey-color: rgb(217,217,217);
+  --border-grey-color: rgb(236,236,236);
+  --extra-light-grey-color: rgb(254,254,254);
+  --shadow-grey-color: rgb(246, 246, 246);
+  --white-color: rgb(255,255,255);
+  --light-green-color: rgb(144,203,190);
+  --arrow-grey-color: rgb(230,230,230);
+}
+.todo-app {
+  background-color: var(--light-grey-color);
+  width: 24%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#headerName {
+  color: var(--pink-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  font-size: 105px;
+}
+
+.list-to-do__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 85%;
+  min-height: 435px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--border-grey-color);
+  background-color: var(--extra-light-grey-color);
+  color: var(--text-light-grey-color);
+}
+
+.toggle-button {
+  background-color: var(--white-color);
+  color: var(--arrow-grey-color);
+  margin-left: 10px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+}
+
+#inputTask {
+  background-color: var(--extra-light-grey-color);
+  padding: 20px;
+  width: 100%;
+  border: none;
+  transition: border 0.3s ease;
+  color: black;
+}
+
+#inputTask:hover, #inputTask:focus {
+  outline: none;
+  cursor: text;
+  animation: blink 1s infinite;
+  color: black;
+}
+@keyframes blink {
+  0%, 100% {
+    border: 2px solid transparent;
+  }
+  50% {
+    border: 2px solid var(--border-grey-color);
+  }
+}
+
+#listToDo {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  list-style-type: none;
+  width: 100%;
+  min-height: 60px;
+  max-height: 300px;
+  text-overflow: ellipsis;
+  overflow-y: auto;
+  border-left: 1px solid var(--border-grey-color);
+  border-right: 1px solid var(--border-grey-color);
+  box-shadow: 0 2px 2px var(--shadow-grey-color);
+}
+
+#itemListToDo, .filter-buttons__wrapper {
+  border-bottom: 1px solid var(--light-grey-color);
+  border-top: 1px solid var(--light-grey-color);
+  background-color: var(--white-color);
+  width: 100%;
+  height: 59px;
+}
+
+#itemListToDo {
+  border-bottom: 1px solid var(--light-grey-color);
+  border-top: 1px solid var(--light-grey-color);
+  background-color: var(--white-color);
+  width: 100%;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.status-button {
+  width: 30px; 
+  height: 30px; 
+  border: none;
+  border-radius: 50%; 
+  background-color: var(--white-color); 
+  border: 2px solid var(--border-grey-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px; 
+
+}
+
+.status-button.completed {
+  background-color: var(--white-color);
+  border: 2px solid green;
+  
+  
+}
+
+.checkmark {
+  color: var(--light-green-color); 
+  font-size: 18px; 
+}
+
+.completed-text {
+  text-decoration: line-through; 
+  color: var(--light-grey-color); 
+}
+
+.filter-buttons__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  height: 59px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+.filter-buttons button {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  background-color: var(--white-color);
+  color: black;
+  border: none;
+  font-size: 16px;
+}
+
+.filter-buttons button:hover {
+  border: 1px solid var(--pink-color);
+  border-radius: 10px;
+}
